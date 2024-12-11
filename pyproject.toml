@@ -15,9 +15,10 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
 ]
-keywords = ["OTE", "OTEAPI", "LITE", "OTEAPI-DLITE"]
+keywords = ["ote", "oteapi", "dlite", "oteapi-dlite"]
 requires-python = ">=3.9"
 dynamic = ["version"]
 
