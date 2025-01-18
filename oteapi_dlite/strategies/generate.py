@@ -92,19 +92,29 @@ class DLiteStorageConfig(DLiteConfiguration):
             ),
         ),
     ] = None
+    property_mappings: Annotated[
+        bool,
+        Field(
+            description="Whether property mappings should be performed.",
+        ),
+    ] = True
     store_collection: Annotated[
         bool,
         Field(
-            description="Whether to store the entire collection in the session "
-            "instead of a single instance.  Cannot be combined with `label` or "
-            "`datamodel`.",
+            description=(
+                "Whether to store the entire collection in the session "
+                "instead of a single instance.  Cannot be combined with "
+                "`label` or `datamodel`."
+            ),
         ),
     ] = False
     store_collection_id: Annotated[
         Optional[str],
         Field(
-            description="Used together with `store_collection` If given, store "
-            "a copy of the collection with this id.",
+            description=(
+                "Used together with `store_collection` If given, store "
+                "a copy of the collection with this id."
+            ),
         ),
     ] = None
     allow_incomplete: Annotated[
@@ -287,7 +297,7 @@ class DLiteGenerateStrategy:
         elif config.datamodel:
             instances = coll.get_instances(
                 metaid=config.datamodel,
-                property_mappings=True,
+                property_mappings=config.property_mappings,
                 allow_incomplete=config.allow_incomplete,
             )
             inst = next(instances)
