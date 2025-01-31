@@ -10,12 +10,19 @@ if TYPE_CHECKING:
 
 def test_generate_kb(paths: PathsTuple) -> None:
     """Test generate with kb documentation enabled."""
+    import ssl
+
     import dlite
     from otelib import OTEClient
     from tripper import OWL, RDF, RDFS, Namespace, Triplestore
     from tripper.convert import load_container, save_container
 
     from oteapi_dlite.utils import get_meta
+
+    # Disable SSL certificate verification
+    ssl._create_default_https_context = ssl._create_unverified_context
+    # For some reason creating the Namespace below causes this failure
+    # but only in this repository...
 
     EMMO = Namespace(
         iri="https://w3id.org/emmo#",
