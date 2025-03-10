@@ -51,7 +51,7 @@ repos:
   # More information can be found in its documentation:
   # https://docs.astral.sh/ruff/
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.9
+    rev: v0.9.10
     hooks:
     - id: ruff
       # Fix what can be fixed in-place and exit with non-zero status if files were
@@ -91,7 +91,7 @@ repos:
   # More information can be found in its documentation:
   # https://SINTEF.github.io/ci-cd/
   - repo: https://github.com/SINTEF/ci-cd
-    rev: v2.9.1
+    rev: v2.9.2
     hooks:
     - id: docs-api-reference
       args:
