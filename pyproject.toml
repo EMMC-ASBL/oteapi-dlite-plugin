@@ -30,7 +30,7 @@ dependencies = [
     "pydantic-settings>=2.0,<3",
     "typing-extensions>=4.8,<5; python_version<'3.10'",
     "Pillow>=9.0.1,<12",
-    "tripper>=0.3.4, <0.3.5",
+    "tripper>=0.3.4, <0.4.1",
 ]
 
 [project.optional-dependencies]
@@ -46,7 +46,7 @@ testing = [
     "PyYAML>=5.4.1,<7",
     "otelib>=0.5.0.dev1,<1",
     "rdflib>=5.0.0,<8",
-    "pytest==8.3.4",
+    "pytest==8.3.5",
     "pytest-cov==6.0.0",
 ]
 dev = [
